@@ -21,7 +21,7 @@ export const authOptions : Auth.CMS12OIDC.Cms12NextAuthOptionsType = {
         buttonText: "Sign in with Frontline Services",
         colorScheme: "auto",
         brandColor: "#27747E",
-        logo: `${DXP_URL}globalassets/_epihealth/logo_frontlineservices.png?width=256&quality=85`
+        logo: `${DXP_URL}globalassets/logo.png?width=256&quality=85`
     }
 }
 
