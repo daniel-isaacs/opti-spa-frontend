@@ -1,0 +1,60 @@
+{
+  "name": "@optimizely/cms-cli",
+  "version": "0.0.2",
+  "description": "Optimizely CMS 12 CLI Tool",
+  "main": "bin/cms-cli.js",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "watch": "yarn tsc --watch",
+    "build": "yarn tsc && yarn rollup dist/cms-cli.js --file bin/cms-cli.js --format es --intro \"#!/usr/bin/env node\""
+  },
+  "bin": {
+    "opti-cms": "bin/cms-cli.js"
+  },
+  "files": [
+    "bin/cms-cli.js"
+  ],
+  "keywords": [
+    "Optimizely",
+    "CMS",
+    "12"
+  ],
+  "author": "Remko Jantzen",
+  "license": "Apache-2.0",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@optimizely/cms": "workspace:^",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/pluginutils": "^5.1.0",
+    "@types/glob": "^8.1.0",
+    "@types/yargs": "^17.0.32",
+    "ansi-styles": "^6.2.1",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.6",
+    "glob": "^10.3.10",
+    "node-fetch": "^3.3.2",
+    "open": "^10.0.4",
+    "openid-client": "^5.6.4",
+    "rollup": "^4.12.1",
+    "typescript": "^5.4.2",
+    "yargs": "^17.7.2"
+  },
+  "peerDependencies": {
+    "@optimizely/cms": "workspace:*",
+    "ansi-styles": "*",
+    "chalk": "*",
+    "cli-table3": "*",
+    "dotenv": "*",
+    "dotenv-expand": "*",
+    "glob": "*",
+    "node-fetch": "*",
+    "open": "*",
+    "openid-client": "*",
+    "yargs": "*"
+  }
+}

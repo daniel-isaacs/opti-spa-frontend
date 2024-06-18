@@ -1,0 +1,358 @@
+
+.optiReact__main-menu>a:hover {
+    background-color: transparent !important;
+}
+
+/* banking services */
+.container.container-services {
+    border-top: 10px solid #27747F;
+    border-bottom: 5px solid #27747F;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color:#acccd1ff;
+    padding: 2rem;
+    gap: 2rem;
+}
+.container.container-services > div.card {
+    background-color:#fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* button styling */
+body a.optiReact__button-block, 
+body a.optiReact__button-block:hover {
+    background-color: #27747eff;
+}
+
+body a.optiReact__button-block:after {
+    border-color: #fff;
+}
+
+body a.optiReact__button-block:hover:after {
+    border-color: #fff;
+}
+body a.optiReact__button-block,
+body a.optiReact__button-block:hover {
+    background-color: #1E5B63;
+}
+body .MuiButton-root {
+    background-color: #27747eff;
+    white-space: nowrap;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+
+body .MuiButton-root:hover {
+    background-color: #1E5B63;
+}
+
+body .MuiButton-root:after,
+body .MuiButton-root:hover:after{
+    border-color: #fff;
+}
+
+
+/* credid card services */
+.services.services-cc {
+    margin-bottom: 2rem;
+    border: 2px solid #eee;
+    padding: 1rem;
+}
+.services.services-cc > div {
+    display: flex;
+    gap: 2rem;
+}
+.services.services-cc > div > div {
+    width: 100%;
+}
+.services.services-cc > div > div:first-child {
+    width: 30%;
+}
+
+.services.services-cc > div > div:first-child img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+.services.services-cc h4 {
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.services.services-cc h6 {
+    font-size: 1rem;
+}
+
+.services.services-cc .container-fluid > div {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.services.services-cc .container-fluid .w-100 {
+    display: none;
+}
+
+.services.services-cc .container-fluid > div > div {
+    padding: .5rem;
+}
+.services.services-cc .d-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.services.services-cc button {
+    background-color: transparent;
+    border: 1px solid #27747eff;
+    padding: 10px 20px;
+    color: #27747eff;
+    text-transform: uppercase;
+}
+
+.services.services-cc button:hover {
+    background-color: #27747eff;
+    color: #fff;
+    cursor: pointer;
+}
+@media(max-width:800px){
+    .services.services-cc > div {
+        flex-direction: column;
+    }
+    
+    .services.services-cc > div > div:first-child {
+        width: 100%;
+    }
+}
+
+/***********************************/
+
+.optiReact__header {
+    background-color: #fff !important;
+}
+
+.optiReact__main-menu>a {
+    background-color: transparent;
+    color: #27747e;
+    font-weight: 100;
+}
+
+.optiReact__main-menu>a:hover {
+    background-color: transparent;
+    color: #17444a;
+}
+
+.optiReact__top-buttons svg {
+    fill: #27747e
+}
+
+.optiReact__page-list-block a,.optiReact__page-list-block a:hover {
+    background-color: #27747e;
+}
+
+.optiReact__page-list-block a:after {
+    border: 4px solid #fff;
+}
+
+.optiReact__page-list-block a:hover:after {
+    border: 3px solid #fff;
+}
+
+.optiReact__main-menu>a:hover {
+    background-color: transparent!important
+}
+
+header.optiReact__header a>img {
+    height: auto
+}
+
+.optiReact__hero {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    max-width: 100rem;
+    margin: auto
+}
+
+.optiReact__container-block.main-services .MuiGrid-root.MuiGrid-item {
+    padding: 0 1rem
+}
+
+.optiReact__container-block.main-services .MuiCardMedia-root {
+    background-size: cover !important;
+}
+
+hr {
+    background-color: #7e2774;
+    height: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    opacity: 1;
+    margin: 2rem auto
+}
+
+.optiReact__container-block.mobile-banking>div {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center
+}
+
+.optiReact__container-block.mobile-banking>div>div:first-child img {
+    height: auto;
+    width: 100%;
+    aspect-ratio: auto
+}
+
+.optiReact__container-block.mobile-banking>div>div:last-child {
+    border-top: 10px solid #27747f;
+    border-bottom: 5px solid #27747f;
+    background-color: #e9f1f2;
+    padding: 1rem
+}
+
+.optiReact__container-block.mobile-banking>div>div:last-child p {
+    margin-bottom: 0
+}
+
+.optiReact__container-block.mobile-banking>div>div:last-child a {
+    margin-bottom: 1rem;
+    display: block
+}
+
+.home-quote-block>div>.row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: auto
+}
+
+.home-quote-block img {
+    border-radius: 50% 50% 0 50%
+}
+
+.home-quote-block span {
+    font-size: 1.5rem
+}
+
+.container.container-services {
+    border-top: 10px solid #27747f;
+    border-bottom: 5px solid #27747f;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background-color: #acccd1;
+    padding: 2rem;
+    grid-gap: 2rem;
+    gap: 2rem
+}
+
+.container.container-services>div.card {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
+
+body a.optiReact__button-block,body a.optiReact__button-block:hover {
+    background-color: #27747e
+}
+
+body a.optiReact__button-block:after,body a.optiReact__button-block:hover:after {
+    border-color: #fff
+}
+
+body .MuiButton-root:hover,body a.optiReact__button-block,body a.optiReact__button-block:hover {
+    background-color: #1e5b63
+}
+
+body .MuiButton-root:after,body .MuiButton-root:hover:after {
+    border-color: #fff
+}
+
+.services.services-cc {
+    margin-bottom: 2rem;
+    border: 2px solid #eee;
+    padding: 1rem
+}
+
+.services.services-cc>div {
+    display: flex;
+    gap: 2rem
+}
+
+.services.services-cc>div>div {
+    width: 100%
+}
+
+.services.services-cc>div>div:first-child {
+    width: 30%
+}
+
+.services.services-cc>div>div:first-child img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 100%
+}
+
+.services.services-cc h4 {
+    font-weight: 100;
+    font-size: 2rem
+}
+
+.services.services-cc h6 {
+    font-size: 1rem
+}
+
+.services.services-cc .container-fluid>div {
+    display: grid;
+    grid-template-columns: repeat(4,1fr)
+}
+
+.services.services-cc .container-fluid .w-100 {
+    display: none
+}
+
+.services.services-cc .container-fluid>div>div {
+    padding: .5rem
+}
+
+.services.services-cc .d-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.services.services-cc button {
+    background-color: transparent;
+    border: 1px solid #27747e;
+    padding: 10px 20px;
+    color: #27747e;
+    text-transform: uppercase
+}
+
+.services.services-cc button:hover {
+    background-color: #27747e;
+    color: #fff;
+    cursor: pointer
+}
+
+@media(max-width: 800px) {
+    .services.services-cc>div {
+        flex-direction:column
+    }
+
+    .services.services-cc>div>div:first-child {
+        width: 100%
+    }
+}
