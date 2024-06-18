@@ -20,7 +20,8 @@ const siteInfo = {
         "https://optispa.opti-demo.net",
         "https://localhost:3091",
         "https://*",
-        "https://localhost:3000"
+        "https://localhost:3000",
+        "https://opti-spa-frontend.vercel.app"
     ],
     "localeDomains": []
 };
