@@ -1847,31 +1847,6 @@ export type ContainerBlock = IContent & {
 }
 
 /**
- * Custom Styles Configuration
- * 
- *
- * @ContentBase Block
- * @ContentGuid e0a64465-b2c5-439c-9208-475109c5a132
- */
-export type CustomStylesBlock = IContent & {
-    /**
-     * Initial styles
-     * Styles to be rendered in the header
-     * 
-     * @translatable    false
-     */
-    initialStyles: PropertyLongString
-
-    /**
-     * Late loaded styles
-     * Styles rendered at the footer of the page
-     * 
-     * @translatable    false
-     */
-    lateStyles: PropertyLongString
-}
-
-/**
  * Facebook Feed Block
  * Display content from a Facebook feed
  *
@@ -2553,31 +2528,6 @@ export type GoogleMapsBlock = IContent & {
      * @translatable    false
      */
     blockOpacity: PropertyFloatNumber
-}
-
-/**
- * Header Settings Block
- * The configuration for the site header component
- *
- * @ContentBase Block
- * @ContentGuid faa26d1a-373c-43ca-b32c-255613d55bcb
- */
-export type HeaderSettingsBlock = IContent & {
-    /**
-     * Default Page Title
-     * The page title that will be used if the template doesn't override the title
-     * 
-     * @translatable    true
-     */
-    defaultTitle: PropertyString
-
-    /**
-     * Site Logo
-     * 
-     * 
-     * @translatable    true
-     */
-    logo: PropertyImageUrl
 }
 
 /**
@@ -7097,23 +7047,6 @@ export type SettingsFolder = IContent & {
 }
 
 /**
- * SettingsGroupBlock
- * 
- *
- * @ContentBase Block
- * @ContentGuid b2a3de54-60e8-48d7-9db2-08cef862e387
- */
-export type SettingsGroupBlock = IContent & {
-    /**
-     * Website
-     * 
-     * 
-     * @translatable    false
-     */
-    website: PropertyLongString
-}
-
-/**
  * Standard Category
  * Used to categorize content
  *
@@ -8481,6 +8414,23 @@ export type ThreeColumnLandingPage = IContent & {
      * @translatable    false
      */
     margin: PropertyLongString
+}
+
+/**
+ * Title Block
+ * Block to add Title to section of page
+ *
+ * @ContentBase Block
+ * @ContentGuid 6e5b227d-7bf4-4483-b189-7fb423c86070
+ */
+export type TitleBlock = IContent & {
+    /**
+     * Title
+     * 
+     * 
+     * @translatable    false
+     */
+    title: PropertyString
 }
 
 /**
