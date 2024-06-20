@@ -13,8 +13,8 @@ function isRefreshTokenError(response) {
 }
 exports.isRefreshTokenError = isRefreshTokenError;
 function refreshToken(host, refresh_token, client_id, client_secret) {
-    var _a;
     return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        var _a;
         const wellKnownUrl = wellKnownEndpointFor(host);
         console.log("CMS12OIDC.refreshToken: Fetching schema");
         const wellKnownInfo = yield (0, cross_fetch_1.default)(wellKnownUrl).then(r => r.json()).catch(() => Promise.resolve(undefined));

@@ -4,7 +4,7 @@ const OptimizelyHost = process.env.OPTIMIZELY_DXP_URL ?? '';
 const OptimizelyClientId = process.env.OPTIMIZELY_DXP_WEB_CLIENT_ID ?? process.env.OPTIMIZELY_DXP_CLIENT_ID ?? 'frontend';
 const CookieOptions = {
     httpOnly: true,
-    sameSite: 'strict',
+    sameSite: 'None',
     path: '/',
     secure: process?.env?.NODE_ENV == "production"
 };

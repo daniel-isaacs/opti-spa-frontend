@@ -9,7 +9,7 @@ const OptimizelyHost = (_a = process.env.OPTIMIZELY_DXP_URL) !== null && _a !== 
 const OptimizelyClientId = (_c = (_b = process.env.OPTIMIZELY_DXP_WEB_CLIENT_ID) !== null && _b !== void 0 ? _b : process.env.OPTIMIZELY_DXP_CLIENT_ID) !== null && _c !== void 0 ? _c : 'frontend';
 const CookieOptions = {
     httpOnly: true,
-    sameSite: 'strict',
+    sameSite: 'None',
     path: '/',
     secure: ((_d = process === null || process === void 0 ? void 0 : process.env) === null || _d === void 0 ? void 0 : _d.NODE_ENV) == "production"
 };
@@ -21,26 +21,26 @@ exports.Cms12NextAuthOptions = {
         }),
     ],
     callbacks: {
-        jwt: ({ token, account, user }) => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
-            var _e, _f, _g, _h;
+        jwt: (_e) => tslib_1.__awaiter(void 0, [_e], void 0, function* ({ token, account, user }) {
+            var _f, _g, _h, _j;
             if (account && user) {
                 const newToken = {
                     accessToken: account.access_token,
                     refreshToken: account.refresh_token,
-                    accessTokenExpires: ((_e = account.expires_at) !== null && _e !== void 0 ? _e : 0) * 1000,
-                    scope: (_f = account.scope) !== null && _f !== void 0 ? _f : '',
+                    accessTokenExpires: ((_f = account.expires_at) !== null && _f !== void 0 ? _f : 0) * 1000,
+                    scope: (_g = account.scope) !== null && _g !== void 0 ? _g : '',
                     user
                 };
                 return newToken;
             }
             const now = Date.now();
-            const accessTokenExpires = (_g = token.accessTokenExpires) !== null && _g !== void 0 ? _g : 0;
+            const accessTokenExpires = (_h = token.accessTokenExpires) !== null && _h !== void 0 ? _h : 0;
             if (accessTokenExpires <= now) {
                 const newToken = yield (0, helpers_1.refreshToken)(OptimizelyHost, token.refreshToken, OptimizelyClientId);
                 if ((0, helpers_1.isRefreshTokenError)(newToken))
                     token.error = newToken.error;
                 else
-                    return Object.assign(Object.assign({}, token), { error: null, accessToken: newToken.access_token, refreshToken: newToken.refresh_token, accessTokenExpires: Date.now() + (((_h = newToken.expires_in) !== null && _h !== void 0 ? _h : 0) * 1000) });
+                    return Object.assign(Object.assign({}, token), { error: null, accessToken: newToken.access_token, refreshToken: newToken.refresh_token, accessTokenExpires: Date.now() + (((_j = newToken.expires_in) !== null && _j !== void 0 ? _j : 0) * 1000) });
             }
             return token;
         }),

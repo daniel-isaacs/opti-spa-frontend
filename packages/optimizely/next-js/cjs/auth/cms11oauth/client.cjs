@@ -11,8 +11,8 @@ class OAuthClient {
             this.baseUrl = baseUrl;
         this.serviceUrl = new URL(internal_1.CMS11_AUTH_SERVICE, baseUrl);
     }
-    login(username, password, clientId = "Default") {
-        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+    login(username_1, password_1) {
+        return tslib_1.__awaiter(this, arguments, void 0, function* (username, password, clientId = "Default") {
             const loginBody = new URLSearchParams();
             loginBody.set('grant_type', 'password');
             loginBody.set('client_id', clientId);
@@ -31,8 +31,8 @@ class OAuthClient {
             return yield res.json();
         });
     }
-    refresh(refresh_token, clientId = "Default") {
-        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+    refresh(refresh_token_1) {
+        return tslib_1.__awaiter(this, arguments, void 0, function* (refresh_token, clientId = "Default") {
             const loginBody = new URLSearchParams();
             loginBody.set('grant_type', 'refresh_token');
             loginBody.set('client_id', clientId);

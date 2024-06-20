@@ -35,8 +35,8 @@ function usePageContent(ref, inEditMode, locale) {
     });
 }
 exports.usePageContent = usePageContent;
-function fetchPageContent(ref, api, locale, inEditMode = false) {
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+function fetchPageContent(ref_1, api_1, locale_1) {
+    return tslib_1.__awaiter(this, arguments, void 0, function* (ref, api, locale, inEditMode = false) {
         if (!ref || ref === '#')
             return undefined;
         const contentId = (0, utils_1.createApiId)(ref, true, inEditMode);
@@ -54,8 +54,8 @@ function fetchPageContent(ref, api, locale, inEditMode = false) {
         return content;
     });
 }
-function loadPageContentByUrl(url, api, locale, inEditMode = false, cLoader) {
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+function loadPageContentByUrl(url_1, api_1, locale_1) {
+    return tslib_1.__awaiter(this, arguments, void 0, function* (url, api, locale, inEditMode = false, cLoader) {
         var path = typeof (url) === 'object' && url !== null ? url.href : url;
         const content = yield api.resolveRoute(path, {
             branch: locale,
@@ -71,8 +71,8 @@ function loadPageContentByUrl(url, api, locale, inEditMode = false, cLoader) {
     });
 }
 exports.loadPageContentByUrl = loadPageContentByUrl;
-function loadPageContent(ref, api, locale, inEditMode = false, cLoader) {
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+function loadPageContent(ref_1, api_1, locale_1) {
+    return tslib_1.__awaiter(this, arguments, void 0, function* (ref, api, locale, inEditMode = false, cLoader) {
         const contentId = (0, utils_1.createApiId)(ref, true, inEditMode);
         const content = yield api.getContent(contentId, {
             branch: locale,
@@ -86,9 +86,9 @@ function loadPageContent(ref, api, locale, inEditMode = false, cLoader) {
     });
 }
 exports.loadPageContent = loadPageContent;
-function iContentDataToProps(content, contentId, api, locale, inEditMode = false, cLoader) {
-    var _a, _b, _c;
-    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+function iContentDataToProps(content_1, contentId_1, api_1, locale_1) {
+    return tslib_1.__awaiter(this, arguments, void 0, function* (content, contentId, api, locale, inEditMode = false, cLoader) {
+        var _a, _b, _c;
         const props = yield (0, utils_1.loadAdditionalPropsAndFilter)(content, api, locale, inEditMode, undefined, cLoader);
         if (!props.fallback)
             props.fallback = {};

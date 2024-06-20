@@ -82,23 +82,23 @@ function getStaticPaths(context) {
     });
 }
 exports.getStaticPaths = getStaticPaths;
-const getStaticProps = ({ params, locale, defaultLocale }, cLoader, cApi) => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
-    var _a, _b, _c, _d;
+const getStaticProps = (_a, cLoader_1, cApi_1) => tslib_1.__awaiter(void 0, [_a, cLoader_1, cApi_1], void 0, function* ({ params, locale, defaultLocale }, cLoader, cApi) {
+    var _b, _c, _d, _e;
     if (DEBUG_ENABLED) {
         console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Start");
         console.time("Optimizely - Next.JS: CMS-Page > getStaticProps");
     }
-    const currentLocale = (_a = locale !== null && locale !== void 0 ? locale : defaultLocale) !== null && _a !== void 0 ? _a : 'en';
-    const page = !Array.isArray(params === null || params === void 0 ? void 0 : params.page) ? [params === null || params === void 0 ? void 0 : params.page] : ((_b = params === null || params === void 0 ? void 0 : params.page) !== null && _b !== void 0 ? _b : []);
+    const currentLocale = (_b = locale !== null && locale !== void 0 ? locale : defaultLocale) !== null && _b !== void 0 ? _b : 'en';
+    const page = !Array.isArray(params === null || params === void 0 ? void 0 : params.page) ? [params === null || params === void 0 ? void 0 : params.page] : ((_c = params === null || params === void 0 ? void 0 : params.page) !== null && _c !== void 0 ? _c : []);
     const api = cApi !== null && cApi !== void 0 ? cApi : (0, content_delivery_1.default)({ debug: DXP_DEBUG, defaultBranch: defaultLocale });
-    const path = page.length > 0 && page[0] != currentLocale ? `/${currentLocale}/${(_c = page.join("/")) !== null && _c !== void 0 ? _c : ''}` : "/";
+    const path = page.length > 0 && page[0] != currentLocale ? `/${currentLocale}/${(_d = page.join("/")) !== null && _d !== void 0 ? _d : ''}` : "/";
     const props = yield (0, use_page_content_1.loadPageContentByUrl)(path, api, currentLocale, false, cLoader);
     if (DEBUG_ENABLED) {
         console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Path:", path);
         console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Properties:", Object.getOwnPropertyNames(props !== null && props !== void 0 ? props : {}).join("; "));
         console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Base Type:", props === null || props === void 0 ? void 0 : props.prefix);
         console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Components:", props === null || props === void 0 ? void 0 : props.component);
-        console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Fallback keys:", Object.getOwnPropertyNames((_d = props === null || props === void 0 ? void 0 : props.fallback) !== null && _d !== void 0 ? _d : {}).join("; "));
+        console.log("Optimizely - Next.JS: CMS-Page > getStaticProps :: Fallback keys:", Object.getOwnPropertyNames((_e = props === null || props === void 0 ? void 0 : props.fallback) !== null && _e !== void 0 ? _e : {}).join("; "));
         console.timeEnd("Optimizely - Next.JS: CMS-Page > getStaticProps");
     }
     return props ? {
@@ -107,12 +107,12 @@ const getStaticProps = ({ params, locale, defaultLocale }, cLoader, cApi) => tsl
     } : { notFound: true, revalidate: 1 };
 });
 exports.getStaticProps = getStaticProps;
-const getServerSideProps = (_e) => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
-    var _f, _g, _h, _j, _k, _l, _m;
-    var { req, res } = _e, context = tslib_1.__rest(_e, ["req", "res"]);
-    const token = yield (0, jwt_1.getToken)({ req: req, cookieName: (_g = (_f = Auth.Cms12NextAuthOptions.cookies) === null || _f === void 0 ? void 0 : _f.sessionToken) === null || _g === void 0 ? void 0 : _g.name });
-    const hasManagementScope = ((_h = token === null || token === void 0 ? void 0 : token.scope) !== null && _h !== void 0 ? _h : '').indexOf("epi_content_management") >= 0 && (token === null || token === void 0 ? void 0 : token.accessToken) ? true : false;
-    const pageUrl = new URL(decodeURIComponent(context.resolvedUrl), `http://${(_j = req.headers.host) !== null && _j !== void 0 ? _j : 'localhost'}`);
+const getServerSideProps = (_f) => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
+    var _g, _h, _j, _k, _l, _m, _o;
+    var { req, res } = _f, context = tslib_1.__rest(_f, ["req", "res"]);
+    const token = yield (0, jwt_1.getToken)({ req: req, cookieName: (_h = (_g = Auth.Cms12NextAuthOptions.cookies) === null || _g === void 0 ? void 0 : _g.sessionToken) === null || _h === void 0 ? void 0 : _h.name });
+    const hasManagementScope = ((_j = token === null || token === void 0 ? void 0 : token.scope) !== null && _j !== void 0 ? _j : '').indexOf("epi_content_management") >= 0 && (token === null || token === void 0 ? void 0 : token.accessToken) ? true : false;
+    const pageUrl = new URL(decodeURIComponent(context.resolvedUrl), `http://${(_k = req.headers.host) !== null && _k !== void 0 ? _k : 'localhost'}`);
     const editInfo = utils_1.EditMode.getEditModeInfo(pageUrl);
     if (!hasManagementScope && editInfo) {
         return {
@@ -126,12 +126,12 @@ const getServerSideProps = (_e) => tslib_1.__awaiter(void 0, void 0, void 0, fun
     if (!isStringArray(pageSegments))
         return { notFound: true };
     const urlLocale = pageSegments[0];
-    const locale = ((_k = context.locales) === null || _k === void 0 ? void 0 : _k.includes(urlLocale)) ? urlLocale : (_m = (_l = context.locale) !== null && _l !== void 0 ? _l : context.defaultLocale) !== null && _m !== void 0 ? _m : 'en';
+    const locale = ((_l = context.locales) === null || _l === void 0 ? void 0 : _l.includes(urlLocale)) ? urlLocale : (_o = (_m = context.locale) !== null && _m !== void 0 ? _m : context.defaultLocale) !== null && _o !== void 0 ? _o : 'en';
     const api = (0, content_delivery_1.default)({
         defaultBranch: locale,
         getAccessToken: () => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
-            var _o;
-            return (_o = token === null || token === void 0 ? void 0 : token.accessToken) !== null && _o !== void 0 ? _o : '';
+            var _p;
+            return (_p = token === null || token === void 0 ? void 0 : token.accessToken) !== null && _p !== void 0 ? _p : '';
         })
     });
     const props = (editInfo === null || editInfo === void 0 ? void 0 : editInfo.contentReference) ?
