@@ -2018,6 +2018,7 @@
         "id": "0cffa8b6-3c20-4b97-914f-75a624b19bff",
         "name": "CaptchaElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2900
@@ -2206,6 +2207,7 @@
         "id": "104bba6b-d3de-4806-abe3-02b2cba730ee",
         "name": "ChoiceElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2400
@@ -2576,6 +2578,45 @@
         ]
     },
     {
+        "id": "e0a64465-b2c5-439c-9208-475109c5a132",
+        "name": "CustomStylesBlock",
+        "baseType": "Block",
+        "editSettings": {
+            "displayName": "Custom Styles Configuration",
+            "description": "",
+            "available": true,
+            "sortOrder": 100
+        },
+        "properties": [
+            {
+                "name": "InitialStyles",
+                "dataType": "PropertyLongString",
+                "branchSpecific": false,
+                "editSettings": {
+                    "visibility": "default",
+                    "displayName": "Initial styles",
+                    "groupName": "Information",
+                    "sortOrder": 10,
+                    "helpText": "Styles to be rendered in the header",
+                    "hint": "textarea"
+                }
+            },
+            {
+                "name": "LateStyles",
+                "dataType": "PropertyLongString",
+                "branchSpecific": false,
+                "editSettings": {
+                    "visibility": "default",
+                    "displayName": "Late loaded styles",
+                    "groupName": "Information",
+                    "sortOrder": 20,
+                    "helpText": "Styles rendered at the footer of the page",
+                    "hint": "textarea"
+                }
+            }
+        ]
+    },
+    {
         "id": "fe935bfb-44b0-4ce2-a448-1d366ff3bbc0",
         "name": "FacebookBlock",
         "baseType": "Block",
@@ -2669,6 +2710,7 @@
         "id": "b2401dfd-e792-4583-a74b-f053ac54a9a6",
         "name": "FileUploadElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2600
@@ -3120,6 +3162,7 @@
         "id": "02ec61ff-819f-4978-add6-a097f5bd944e",
         "name": "FormContainerBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 4000
@@ -3359,6 +3402,7 @@
         "id": "4daf691c-1dc9-4182-b04e-f0ed5d449bb9",
         "name": "FormStepBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 3100
@@ -3521,6 +3565,43 @@
                     "displayName": "Block opacity (0 to 1)",
                     "groupName": "BlockStyling",
                     "sortOrder": 4
+                }
+            }
+        ]
+    },
+    {
+        "id": "faa26d1a-373c-43ca-b32c-255613d55bcb",
+        "name": "HeaderSettingsBlock",
+        "baseType": "Block",
+        "editSettings": {
+            "displayName": "Header Settings Block",
+            "description": "The configuration for the site header component",
+            "available": true,
+            "sortOrder": 100
+        },
+        "properties": [
+            {
+                "name": "DefaultTitle",
+                "dataType": "PropertyString",
+                "branchSpecific": true,
+                "editSettings": {
+                    "visibility": "default",
+                    "displayName": "Default Page Title",
+                    "groupName": "Information",
+                    "sortOrder": 0,
+                    "helpText": "The page title that will be used if the template doesn't override the title"
+                }
+            },
+            {
+                "name": "Logo",
+                "dataType": "PropertyImageUrl",
+                "branchSpecific": true,
+                "editSettings": {
+                    "visibility": "default",
+                    "displayName": "Site Logo",
+                    "groupName": "Information",
+                    "sortOrder": 10,
+                    "helpText": ""
                 }
             }
         ]
@@ -4190,6 +4271,7 @@
         "id": "cb3d3dda-316b-4044-9521-6b05d332722d",
         "name": "ImageChoiceElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2500
@@ -6245,6 +6327,7 @@
         "id": "d2ab34fb-103f-4a0c-9233-1a48e530d9a4",
         "name": "NumberElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2200
@@ -6766,6 +6849,7 @@
         "id": "a917b1ae-738f-416d-b033-7c229559003d",
         "name": "ParagraphTextElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 3000
@@ -7579,6 +7663,7 @@
         "id": "d08021d2-ffff-4359-9603-3c66d7eb97c6",
         "name": "PredefinedHiddenElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2700
@@ -8290,6 +8375,7 @@
         "id": "86bf688b-e61b-4e0a-94ca-715587125494",
         "name": "RangeElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2240
@@ -8468,6 +8554,7 @@
         "id": "0bca37fd-ff33-4b6c-9fb3-2ab64b1d0bc2",
         "name": "ResetButtonElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 3300
@@ -9695,6 +9782,7 @@
         "id": "21299360-fedd-4978-afcd-ae76991ba63b",
         "name": "SelectionElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2300
@@ -9859,6 +9947,27 @@
             "sortOrder": 0
         },
         "properties": []
+    },
+    {
+        "id": "b2a3de54-60e8-48d7-9db2-08cef862e387",
+        "name": "SettingsGroupBlock",
+        "baseType": "Block",
+        "editSettings": {
+            "available": true,
+            "sortOrder": 0
+        },
+        "properties": [
+            {
+                "name": "Website",
+                "dataType": "PropertyLongString",
+                "branchSpecific": false,
+                "editSettings": {
+                    "visibility": "default",
+                    "groupName": "Information",
+                    "sortOrder": 0
+                }
+            }
+        ]
     },
     {
         "id": "a9bbd7fc-27c5-4718-890a-e28acbe5ee26",
@@ -10388,6 +10497,7 @@
         "id": "ea72a208-1185-4141-a8a6-5febd7f5949a",
         "name": "SubmitButtonElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 3200
@@ -11132,6 +11242,7 @@
         "id": "e7f31175-2f9c-4733-8180-8b6512a64a3a",
         "name": "TextareaElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2100
@@ -11255,6 +11366,7 @@
         "id": "39547dd4-6045-4eb1-968f-80921bd91e36",
         "name": "TextboxElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2000
@@ -11780,31 +11892,6 @@
         ]
     },
     {
-        "id": "6e5b227d-7bf4-4483-b189-7fb423c86070",
-        "name": "TitleBlock",
-        "baseType": "Block",
-        "editSettings": {
-            "displayName": "Title Block",
-            "description": "Block to add Title to section of page",
-            "available": true,
-            "sortOrder": 100
-        },
-        "properties": [
-            {
-                "name": "Title",
-                "dataType": "PropertyString",
-                "branchSpecific": false,
-                "editSettings": {
-                    "visibility": "default",
-                    "displayName": "Title",
-                    "groupName": "Information",
-                    "sortOrder": 10,
-                    "helpText": ""
-                }
-            }
-        ]
-    },
-    {
         "id": "8ed98895-c4a5-4d4d-8abf-43853bd46bc8",
         "name": "TwitterBlock",
         "baseType": "Block",
@@ -12259,6 +12346,7 @@
         "id": "dcfc84ca-2f9d-4b51-a792-eaaf7fb8ffea",
         "name": "UrlElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2250
@@ -12916,6 +13004,7 @@
         "id": "d08021d2-f73e-4359-9603-3c66d7eb97c6",
         "name": "VisitorDataHiddenElementBlock",
         "baseType": "Block",
+        "version": "5.8.0.0",
         "editSettings": {
             "available": true,
             "sortOrder": 2800
@@ -13264,6 +13353,7 @@
         "id": "aeecadf2-3e89-4117-adeb-f8d43565d3f4",
         "name": "WebhookFactoryBlock",
         "baseType": "Block",
+        "version": "0.1.0.0",
         "editSettings": {
             "displayName": "Webhook Factory",
             "description": "Add/manage a webhook",
