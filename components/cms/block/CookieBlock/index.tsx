@@ -178,7 +178,6 @@ export const CookieBlockComponent: IContentComponent<CookieBlock> = () => {
       {cookies?.["_gcc.profile"] && (
         <div>
           <h2>User Information:</h2>
-          <p>Cookie Name : {cookies?.["_gcc.profile"]}</p>
           <p>Customer Number : {cookies?.["_gcc.profile"].CustomerNumber}</p>
           <p>
             Recognition Status : {cookies?.["_gcc.profile"].RecognitionStatus}
