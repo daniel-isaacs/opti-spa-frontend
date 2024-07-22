@@ -30,10 +30,18 @@ export class AppDocument extends Document<EmotionDocumentProps> {
         // eslint-disable-next-line @next/next/no-sync-scripts
         const optimizelyWebEx = exp_id ? <script src={` https://cdn.optimizely.com/js/${ exp_id }.js`} /> : undefined
         const optimizelyDataPlatform = odp_id ? <script dangerouslySetInnerHTML={{__html: `var zaius = window['zaius']||(window['zaius']=[]);zaius.methods=["initialize","onload","customer","entity","event","subscribe","unsubscribe","consent","identify","anonymize","dispatch"];zaius.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);zaius.push(t);return zaius}};(function(){for(var i=0;i<zaius.methods.length;i++){var method=zaius.methods[i];zaius[method]=zaius.factory(method)}var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src=("https:"===document.location.protocol?"https://":"http://")+"d1igp3oop3iho5.cloudfront.net/v2/${odp_id}/zaius-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})(); `}} /> : undefined
-        return <Html lang={ lang }>
+        const adobeAnalytics = (
+            <script
+              data-cfasync="false"
+              src="https://assets.adobedtm.com/launch-ENb87d98570ae64447a7f981a0c4962bb7-development.min.js"
+              async
+            ></script>
+          );
+       return <Html lang={ lang }>
               <Head>
                 { optimizelyWebEx }
                 { optimizelyDataPlatform }
+                { adobeAnalytics }
                 <meta name="emotion-insertion-point" />
                 { this.props.emotionStyleTags }
               </Head>

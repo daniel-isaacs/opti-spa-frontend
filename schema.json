@@ -12,6 +12,18 @@
     "properties": []
   },
   {
+    "id": "3f95e8b1-3d28-4dec-a05e-7cd52d14c1df",
+    "name": "CookieBlock",
+    "baseType": "Block",
+    "editSettings": {
+        "displayName": "Cookie Block",
+        "description": "",
+        "available": true,
+        "sortOrder": 100
+    },
+    "properties": []
+  },
+  {
     "id": "eaacadf2-3e89-4117-adeb-f8d43565d2f4",
     "name": "BlogItemPage",
     "baseType": "Page",

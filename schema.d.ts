@@ -18,6 +18,17 @@ export type APIContentBlock = IContent & {
 }
 
 /**
+ * Cookie Block
+ * 
+ *
+ * @ContentBase Block
+ * @ContentGuid 3f95e8b1-3d28-4dec-a05e-7cd52d14c1df
+ */
+export type CookieBlock = IContent & {
+
+}
+
+/**
  * Blog Item Page
  * Blog Item Page created underneath the start page and moved to the right area
  *
