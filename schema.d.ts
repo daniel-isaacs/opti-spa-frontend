@@ -6,6 +6,16 @@
  **/
 import type { IContent, PropertyLongString, PropertyBoolean, PropertyContentReferenceList, PropertyXhtmlString, PropertyFloatNumber, PropertyNumber, PropertyInt, PropertyContentReference, PropertyPageReference, PropertyContentArea, PropertyLink, PropertyLinkCollection, PropertyBlock } from '@optimizely/cms/models'
 
+/**
+ * API Content Block
+ * 
+ *
+ * @ContentBase Block
+ * @ContentGuid a3b341d3-a37d-47de-a215-936daee31b7d
+ */
+export type APIContentBlock = IContent & {
+
+}
 
 /**
  * Blog Item Page

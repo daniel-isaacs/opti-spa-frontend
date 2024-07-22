@@ -62,6 +62,11 @@ export const CmsPageComponents : Record<string, ComponentType> = {
         /* webpackMode: "lazy-once" */
         "./TitleBlock"
     ), { ssr: true }),
+    "block/APIContentBlock": createDynamicComponent(() => import(
+        /* webpackChunkName: "block-button" */
+        /* webpackMode: "lazy-once" */
+        "./APIContentBlock"
+    ),{ ssr: true })   
 }
 
 export default CmsPageComponents
