@@ -24,6 +24,18 @@
     "properties": []
   },
   {
+    "id": "26a165b3-e91c-48f7-86df-b03dfeff6778",
+    "name": "AdobeAnalyticsTestBlock",
+    "baseType": "Block",
+    "editSettings": {
+        "displayName": "Adobe Analytics Test Block",
+        "description": "",
+        "available": true,
+        "sortOrder": 100
+    },
+    "properties": []
+  },
+  {
     "id": "eaacadf2-3e89-4117-adeb-f8d43565d2f4",
     "name": "BlogItemPage",
     "baseType": "Page",
