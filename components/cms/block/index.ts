@@ -71,11 +71,6 @@ export const CmsPageComponents : Record<string, ComponentType> = {
         /* webpackChunkName: "block-button" */
         /* webpackMode: "lazy-once" */
         "./CookieBlock"
-    ),{ ssr: true }),   
-    "block/AdobeAnalyticsTestBlock": createDynamicComponent(() => import(
-        /* webpackChunkName: "block-button" */
-        /* webpackMode: "lazy-once" */
-        "./AdobeAnalyticsTestBlock"
     ),{ ssr: true })     
 }
 
