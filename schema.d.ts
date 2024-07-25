@@ -29,17 +29,6 @@ export type CookieBlock = IContent & {
 }
 
 /**
- * Adobe Analytics Test Block
- * 
- *
- * @ContentBase Block
- * @ContentGuid 26a165b3-e91c-48f7-86df-b03dfeff6778
- */
-export type AdobeAnalyticsTestBlock = IContent & {
-
-}
-
-/**
  * Blog Item Page
  * Blog Item Page created underneath the start page and moved to the right area
  *
